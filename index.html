@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitacion de Cumpleanos - Gabriel</title>
+    <meta
+      name="description"
+      content="Invitacion de cumpleanos de Gabriel Lopez Castillo."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rye&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="intro-overlay" id="introOverlay" aria-hidden="false">
+      <div class="intro-card">
+        <img
+          src="images/botas.PNG"
+          alt="Botas vaqueras decorativas"
+          class="intro-sticker intro-sticker-boots"
+          loading="lazy"
+        />
+        <img
+          src="images/sombrero.PNG"
+          alt="Sombrero vaquero decorativo"
+          class="intro-sticker intro-sticker-hat"
+          loading="lazy"
+        />
+        <img
+          src="images/herradura.PNG"
+          alt="Herradura decorativa"
+          class="intro-sticker intro-sticker-horseshoe"
+          loading="lazy"
+        />
+        <img
+          src="images/calavera.PNG"
+          alt="Calavera vaquera decorativa"
+          class="intro-sticker intro-sticker-skull"
+          loading="lazy"
+        />
+        <p class="intro-pretitle">Yee-haw!</p>
+        <h1>Estas invitado a mi primer añito</h1>
+        <p>
+          Preparate para una tarde llena de alegria, juegos y mucha diversion con
+          estilo vaquero.
+        </p>
+        <button id="openInvitationBtn" class="btn btn-primary" type="button">
+          Abrir invitacion
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero reveal">
+        <p class="section-eyebrow">Hola, familia y amigos</p>
+        <div class="hero-photo-wrap">
+          <img
+            src="images/gabriel.jpeg"
+            alt="Foto de Gabriel"
+            class="hero-photo"
+          />
+        </div>
+        <p class="hero-kicker">Te invito a mi fiesta vaquera</p>
+        <h2>Gabriel Lopez Castillo</h2>
+        <p class="hero-text">
+          Con mucha alegria te invitamos a celebrar junto a nosotros un dia
+          muy especial, lleno de juegos, sonrisas y aventuras del viejo oeste.
+        </p>
+        <div class="chips">
+          <span>18 de julio</span>
+          <span>3:00 p. m.</span>
+          <span>Fiesta familiar</span>
+        </div>
+      </section>
+
+      <section class="message reveal">
+        <h3>Un saludo especial</h3>
+        <p>
+          Queremos que seas parte de este momento tan bonito para Gabriel. Sus padres
+          Alex López e Isabela Castillo, te invitamos a compartir una celebración llena de alegria, sonrisas y momentos
+          inolvidables con nosotros en este día tan especial.
+        </p>    
+        <p>
+          Habra una tarde llena de detalles tiernos, abrazos y mucha diversion
+          para grandes y pequeños.
+        </p>
+      </section>
+
+      <section class="countdown-section reveal" aria-labelledby="countdownTitle">
+        <h3 id="countdownTitle">Faltan...</h3>
+        <div class="countdown" role="timer" aria-live="polite">
+          <article class="time-box">
+            <span id="days">00</span>
+            <small>Dias</small>
+          </article>
+          <article class="time-box">
+            <span id="hours">00</span>
+            <small>Horas</small>
+          </article>
+          <article class="time-box">
+            <span id="minutes">00</span>
+            <small>Minutos</small>
+          </article>
+          <article class="time-box">
+            <span id="seconds">00</span>
+            <small>Segundos</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="details reveal">
+        <h3>Detalles del evento</h3>
+        <div class="details-grid">
+          <article class="detail-card">
+            <h4>Fecha y hora</h4>
+            <p>Sabado 18 de julio de 2026</p>
+            <p>3:00 p. m.</p>
+          </article>
+          <article class="detail-card">
+            <h4>Lugar</h4>
+            <p>Te esperamos para celebrar juntos a Gabriel.</p>
+            <a
+              class="btn btn-secondary"
+              href="https://maps.app.goo.gl/NT52hia7wFRfUYT67?g_st=aw"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Ver mapa</a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section class="dress-code reveal">
+        <h3>Dress code vaquero</h3>
+        <p>
+          Si quieres sumarte a la tematica, puedes traer a tu niño con camisa de cuadros,
+          sombrero, botas o tonos tierra. Lo mas importante es venir con una
+          gran sonrisa.
+        </p>
+      </section>
+
+      <section class="quote reveal">
+        <p>
+          "Cada cumpleaños es una nueva aventura. Gracias por acompañarnos a
+          hacer inolvidable este día de Gabriel."
+        </p>
+      </section>
+
+      <section class="rsvp reveal" id="confirmar-asistencia">
+        <h3>Confirmar asistencia</h3>
+        <p>
+          Por favor completa estos datos para confirmar asistencia.
+        </p>
+
+        <form id="rsvpForm" novalidate>
+          <label for="guestName">Nombre</label>
+          <input
+            id="guestName"
+            name="nombre"
+            type="text"
+            placeholder="Escribe tu nombre"
+            required
+            minlength="2"
+          />
+
+          <div class="form-row">
+            <div>
+              <label for="adults">Cuantos adultos</label>
+              <input
+                id="adults"
+                name="adultos"
+                type="number"
+                min="0"
+                value="1"
+                required
+              />
+            </div>
+            <div>
+              <label for="kids">Cuantos niños</label>
+              <input
+                id="kids"
+                name="ninos"
+                type="number"
+                min="0"
+                value="0"
+                required
+              />
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="submit" id="submitBtn">
+            Confirmar asistencia
+          </button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="reveal">
+      <p>Con mucho cariño, te esperamos en esta celebración vaquera.</p>
+      <img
+        src="images/no_faltes.PNG"
+        alt="No faltes"
+        class="no-faltes-image"
+        loading="lazy"
+      />
+    </footer>
+
+    <audio id="bgMusic" src="rodeo.mp3" loop autoplay muted></audio>
+
+    <div
+      class="confirmation-modal hidden"
+      id="confirmationModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="confirmationModalTitle"
+    >
+      <div class="confirmation-modal-card">
+        <h4 id="confirmationModalTitle">Asistencia confirmada</h4>
+        <img
+          src="images/no_faltes.PNG"
+          alt="No faltes"
+          class="confirmation-modal-image"
+          loading="lazy"
+        />
+        <button id="confirmationModalOkBtn" class="btn btn-primary" type="button">
+          OK
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
